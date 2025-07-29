@@ -33,10 +33,30 @@ const counterItems = [
 
 // LeetCode counter items - will be populated dynamically
 const leetcodeCounterItems = [
-  { key: "totalSolved", suffix: "", label: "Problems Solved" },
-  { key: "easySolved", suffix: "", label: "Easy Problems" },
-  { key: "mediumSolved", suffix: "", label: "Medium Problems" },
-  { key: "hardSolved", suffix: "", label: "Hard Problems" },
+  {
+    key: "totalSolved",
+    suffix: "",
+    label: "Problems Solved",
+    color: "text-orange-100",
+  },
+  {
+    key: "easySolved",
+    suffix: "",
+    label: "Easy Problems",
+    color: "text-green-400",
+  },
+  {
+    key: "mediumSolved",
+    suffix: "",
+    label: "Medium Problems",
+    color: "text-yellow-400",
+  },
+  {
+    key: "hardSolved",
+    suffix: "",
+    label: "Hard Problems",
+    color: "text-red-400",
+  },
 ];
 
 const logoIconsList = [
