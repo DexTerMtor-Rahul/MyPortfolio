@@ -31,6 +31,14 @@ const counterItems = [
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
+// LeetCode counter items - will be populated dynamically
+const leetcodeCounterItems = [
+  { key: "totalSolved", suffix: "", label: "Problems Solved" },
+  { key: "easySolved", suffix: "", label: "Easy Problems" },
+  { key: "mediumSolved", suffix: "", label: "Medium Problems" },
+  { key: "hardSolved", suffix: "", label: "Hard Problems" },
+];
+
 const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-1.png",
@@ -189,6 +197,7 @@ export {
   abilities,
   logoIconsList,
   counterItems,
+  leetcodeCounterItems,
   expCards,
   expLogos,
   socialImgs,

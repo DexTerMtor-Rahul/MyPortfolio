@@ -3,8 +3,8 @@ import { words } from "../constants/index.js";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import AnimatedCounter from "../components/AnimatedCounter.jsx";
-
+import LeetCodeCounter from "../components/LeetCodeCounter.jsx";
+import { config } from "../config/index.js";
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
@@ -77,7 +77,7 @@ const Hero = () => {
         </figure>
       </div>
 
-      <AnimatedCounter />
+      <LeetCodeCounter username={config.leetcodeUsername} />
     </section>
   );
 };
