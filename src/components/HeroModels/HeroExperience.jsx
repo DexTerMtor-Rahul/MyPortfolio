@@ -35,7 +35,8 @@ const HeroExperience = () => {
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
       <OrbitControls
         enablePan={false}
-        enableZoom={!isTablet}
+        enableZoom={false}
+        enableRotate={true}
         maxDistance={20}
         minDistance={5}
         minPolarAngle={Math.PI / 5}
@@ -44,7 +45,7 @@ const HeroExperience = () => {
 
       <Float>
         <Astronaut
-          scale={isMobile && 0.23}
+          scale={isMobile ? 0.18 : 0.25}
           position={isMobile && [0, -1.5, 0]}
         />
       </Float>
