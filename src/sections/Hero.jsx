@@ -3,8 +3,8 @@ import { words } from "../constants/index.js";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import LeetCodeCounter from "../components/LeetCodeCounter.jsx";
-import { config } from "../config/index.js";
+import ParallaxBackground from "../components/HeroModels/ParallaxBackground.jsx";
+
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
@@ -26,7 +26,8 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
+        {/* <img src="/images/bg.png" alt="" /> */}
+        <ParallaxBackground />
       </div>
       <div className="hero-layout">
         {/* LEFT: Hero Content */}
@@ -57,7 +58,7 @@ const Hero = () => {
               <h1>Into Real Results</h1>
             </div>
 
-            <p className="text-orange-500 md:text-xl relative z-10 pointer-events-none">
+            <p className="text-white md:text-xl relative z-10 pointer-events-none">
               Hi, I’m Rahul Raj, an MCA graduate and Software Developer <br />
               who loves turning ideas into secure, real-world solutions.
             </p>
@@ -68,7 +69,6 @@ const Hero = () => {
             />
           </div>
         </header>
-
         {/* Right: 3D Model */}
         <figure>
           <div className="hero-3d-layout">
@@ -76,8 +76,6 @@ const Hero = () => {
           </div>
         </figure>
       </div>
-
-      <LeetCodeCounter username={config.leetcodeUsername} />
     </section>
   );
 };

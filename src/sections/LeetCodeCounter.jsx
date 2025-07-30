@@ -32,9 +32,9 @@ const LeetCodeCounter = ({ username }) => {
         <h2 className="text-3xl font-bold text-orange-100 mb-2">
           LeetCode Statistics
         </h2>
-        <p className="text-orange-500">
+        {/* <p className="text-orange-500">
           @{leetcodeStats?.username || username}
-        </p>
+        </p> */}
       </div>
       <div className="mx-auto grid-4-cols">
         {leetcodeCounterItems.map((item, index) => {
