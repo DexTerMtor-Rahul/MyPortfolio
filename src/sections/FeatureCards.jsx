@@ -2,7 +2,7 @@ import TitleHeader from "../components/TitleHeader";
 import { abilities } from "../constants";
 
 const FeatureCards = () => (
-  <div className="md:mt-40 mt-20  w-full padding-x-lg">
+  <div id="abilities" className="md:mt-40 mt-20  w-full padding-x-lg">
     <TitleHeader title="My Abilities" sub="🎯 What I excel at" />
     <div className="mt-5 mx-auto grid-3-cols">
       {abilities.map(({ imgPath, title, desc }) => (

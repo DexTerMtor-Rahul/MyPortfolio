@@ -11,12 +11,16 @@ const words = [
 
 const navLinks = [
   {
-    name: "Education",
-    link: "#education",
+    name: "Stats",
+    link: "#leetcode-counter",
   },
   {
     name: "Experience",
     link: "#experience",
+  },
+  {
+    name: "Abilities",
+    link: "#abilities",
   },
   {
     name: "Skills",
