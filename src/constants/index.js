@@ -179,7 +179,7 @@ const expCards = [
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Junior Software Developer – Profinch Solutions",
-    date: "July 2025 – Present",
+    date: "August 2025 – Present",
     responsibilities: [
       "Collaborating on core banking and fintech solutions, contributing to both frontend and backend modules.",
       "Working closely with cross-functional teams to implement new features and resolve technical issues.",
@@ -195,11 +195,10 @@ const expCards = [
     title: "SDE Intern",
     date: "January 2025 – July 2025",
     responsibilities: [
-      "Engineered a React/Flask-based GPO review portal, reducing manual review time by 75% across 400+ GPOs.",
-      "Automated extraction of 500+ GPOs from Active Directory using PowerShell, saving 40 hours of manual effort weekly.",
-      "Developed a Windows patching compliance portal with real-time visibility for 5000+ devices.",
-      "Integrated Spotfire, AD, and PowerShell for monitoring and internet access control, reducing IT tickets by 15%.",
-      "Built an admin module for handling exception requests and compliance uploads via a streamlined UI.",
+      "Developed scalable full-stack web applications using React.js, Flask, and SQL Server, focusing on modular design and maintainability.",
+      "Automated enterprise workflows with PowerShell and integrated Microsoft Active Directory and Spotfire for compliance and monitoring solutions.",
+      "Collaborated in an agile environment using tools like JIRA, Git, and Confluence, contributing to sprint planning, code reviews, and documentation.",
+      "Delivered clean, well-documented code with an emphasis on performance optimization, debugging, and production-readiness across Windows-based systems.",
     ],
   },
 ];
