@@ -27,7 +27,7 @@ const LeetCodeCounter = ({ username }) => {
   }, [username]);
 
   return (
-    <div id="leetcode-counter" className="padding-x-lg xl:mt-0 mt-32">
+    <div id="leetcode-counter" className="padding-x-lg xl:mt-0 mt-20">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-orange-100 mb-2">
           LeetCode Statistics
