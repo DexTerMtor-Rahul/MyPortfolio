@@ -175,28 +175,31 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Rahul joined Profinch with enthusiasm and a problem-solving mindset, quickly adapting to our development stack and contributing effectively to product enhancements.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Junior Software Developer – Profinch Solutions",
+    date: "July 2025 – Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Collaborating on core banking and fintech solutions, contributing to both frontend and backend modules.",
+      "Working closely with cross-functional teams to implement new features and resolve technical issues.",
+      "Writing clean, scalable code while adhering to best practices and code review processes.",
+      "Participating in agile ceremonies and contributing to sprint planning and estimations.",
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+      "Rahul played a pivotal role in developing automation portals that significantly enhanced IT compliance and security visibility. His full-stack contributions were instrumental to our workflow improvements.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    title: "SDE Intern",
+    date: "January 2025 – July 2025",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Engineered a React/Flask-based GPO review portal, reducing manual review time by 75% across 400+ GPOs.",
+      "Automated extraction of 500+ GPOs from Active Directory using PowerShell, saving 40 hours of manual effort weekly.",
+      "Developed a Windows patching compliance portal with real-time visibility for 5000+ devices.",
+      "Integrated Spotfire, AD, and PowerShell for monitoring and internet access control, reducing IT tickets by 15%.",
+      "Built an admin module for handling exception requests and compliance uploads via a streamlined UI.",
     ],
   },
 ];
