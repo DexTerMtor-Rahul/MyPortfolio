@@ -170,6 +170,18 @@ const techStackIcons = [
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
+  {
+    name: "Java Developer",
+    modelPath: "/models/java.glb",
+    scale: 1.2,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "C++ Developer",
+    modelPath: "/models/c.glb",
+    scale: 0.08,
+    rotation: [0, 0, 0],
+  },
 ];
 
 const expCards = [
