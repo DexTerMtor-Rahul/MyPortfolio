@@ -29,7 +29,7 @@ const Hero = () => {
         {/* <img src="/images/bg.png" alt="" /> */}
         <ParallaxBackground />
       </div>
-      <div className="hero-layout relative z-10">
+      <div className="hero-layout">
         {/* LEFT: Hero Content */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
@@ -65,7 +65,7 @@ const Hero = () => {
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
               id="button"
-              text="See my Work"
+              text="My Journey"
             />
           </div>
         </header>
