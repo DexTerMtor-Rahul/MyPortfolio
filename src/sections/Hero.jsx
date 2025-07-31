@@ -25,11 +25,11 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
+      <div className="absolute inset-0 z-0">
         {/* <img src="/images/bg.png" alt="" /> */}
         <ParallaxBackground />
       </div>
-      <div className="hero-layout">
+      <div className="hero-layout relative z-10">
         {/* LEFT: Hero Content */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
@@ -47,7 +47,7 @@ const Hero = () => {
                         <img
                           src={word.imgPath}
                           alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-orange-100"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white"
                         />
                         <span>{word.text}</span>
                       </span>

@@ -328,7 +328,7 @@ section {
 .slide {
   display: inline-block;
   flex-direction: column;
-  color: #ff7b00;
+  /* color: #ff7b00; */
   transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
 }
 
