@@ -11,7 +11,7 @@ const words = [
 
 const navLinks = [
   {
-    name: "Stats",
+    name: "Leetcode Stats",
     link: "#leetcode-counter",
   },
   {

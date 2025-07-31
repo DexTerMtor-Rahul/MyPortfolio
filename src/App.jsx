@@ -1,5 +1,5 @@
 import Hero from "./sections/Hero";
-import LeetCodeCounter from "./sections/LeetCodeCounter";
+import LeetCodeSection from "./sections/LeetCodeSection.jsx";
 import { config } from "./constants/index.js";
 import AppShowcase from "./sections/ShowcaseSection.jsx";
 import NavBar from "./components/NavBar.jsx";
@@ -14,7 +14,7 @@ const App = () => {
     <>
       <NavBar />
       <Hero />
-      <LeetCodeCounter username={config.leetcodeUsername} />
+      <LeetCodeSection username={config.leetcodeUsername} />
       {/* <AppShowcase />
       <LogoSection /> */}
       <ExperienceSection />
