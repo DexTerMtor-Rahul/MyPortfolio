@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { leetcodeCounterItems } from "../constants";
 import { fetchLeetCodeStats } from "../services/leetcodeApi";
 import CountUp from "react-countup";
+import TitleHeader from "../components/TitleHeader";
 
 const LeetCodeCounter = ({ username }) => {
   const [leetcodeStats, setLeetcodeStats] = useState(null);
@@ -28,15 +29,8 @@ const LeetCodeCounter = ({ username }) => {
 
   return (
     <div id="leetcode-counter" className="padding-x-lg xl:mt-0 mt-20">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-orange-100 mb-2">
-          LeetCode Statistics
-        </h2>
-        {/* <p className="text-orange-500">
-          @{leetcodeStats?.username || username}
-        </p> */}
-      </div>
-      <div className="mx-auto grid-4-cols">
+      <TitleHeader title="LeetCode Statistics" sub={"💻 My LeetCode Journey"} />
+      <div className="mx-auto grid-4-cols mt-5">
         {leetcodeCounterItems.map((item, index) => {
           const value = leetcodeStats?.[item.key] || 0;
           return (
