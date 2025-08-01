@@ -144,6 +144,26 @@ section {
       }
     }
 
+    .nav-buttons {
+      @apply flex items-center gap-3;
+    }
+
+    .resume-btn {
+      @apply flex;
+
+      .inner {
+        @apply px-5 py-2 rounded-lg bg-orange-50 text-black group-hover:bg-black-50 transition-colors duration-300;
+
+        .download-icon {
+          @apply transition-colors duration-300 group-hover:text-white mr-1.5;
+        }
+
+        span {
+          @apply group-hover:text-white transition-colors duration-300;
+        }
+      }
+    }
+
     .contact-btn {
       @apply flex;
 
