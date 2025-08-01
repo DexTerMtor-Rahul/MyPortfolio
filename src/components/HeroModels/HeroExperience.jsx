@@ -32,7 +32,9 @@ const HeroExperience = () => {
     //   </group>
     // </Canvas>
 
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas
+      camera={{ position: [0, 0, isMobile ? 12 : isTablet ? 14 : 15], fov: 45 }}
+    >
       <OrbitControls
         enablePan={false}
         enableZoom={false}
@@ -45,8 +47,10 @@ const HeroExperience = () => {
 
       <Float>
         <Astronaut
-          scale={isMobile ? 0.18 : 0.25}
-          position={isMobile && [0, -1.5, 0]}
+          scale={isMobile ? 0.14 : isTablet ? 0.16 : 0.25}
+          position={
+            isMobile ? [0, -1.8, 0] : isTablet ? [0, -1.2, 0] : [0, 0, 0]
+          }
         />
       </Float>
       <Rig />
@@ -55,10 +59,21 @@ const HeroExperience = () => {
 };
 
 function Rig() {
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return useFrame((state, delta) => {
+    const mouseMultiplier = isMobile ? 5 : isTablet ? 8 : 10;
+    const baseY = isMobile ? 0.5 : isTablet ? 0.8 : 1;
+    const baseZ = isMobile ? 2 : isTablet ? 2.5 : 3;
+
     easing.damp3(
       state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
+      [
+        state.mouse.x / mouseMultiplier,
+        baseY + state.mouse.y / mouseMultiplier,
+        baseZ,
+      ],
       0.5,
       delta
     );
