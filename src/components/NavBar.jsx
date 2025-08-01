@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "../constants";
+import { HiDownload } from "react-icons/hi";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,20 +44,7 @@ const NavBar = () => {
             rel="noopener noreferrer"
           >
             <div className="inner">
-              <svg
-                className="download-icon"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 16L16 12H13V4H11V12H8L12 16Z"
-                  fill="currentColor"
-                />
-                <path d="M20 18H4V20H20V18Z" fill="currentColor" />
-              </svg>
+              <HiDownload className="download-icon" size={16} />
               <span>Resume</span>
             </div>
           </a>
