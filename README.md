@@ -19,7 +19,6 @@ Welcome to my personal portfolio website! This project represents my skills, exp
 The following sequence diagram illustrates how the portfolio loads and renders each section:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#cccccc', 'lineColor': '#666666', 'secondaryColor': '#f8f9fa', 'tertiaryColor': '#ffffff'}}}%%
 sequenceDiagram
     participant User
     participant App as App.jsx
@@ -62,7 +61,6 @@ This flow shows how data flows from configuration through each section, with ext
 The following UML class diagram shows the component structure and relationships within the portfolio:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor': '#ffffff', 'primaryTextColor': '#000000', 'primaryBorderColor': '#cccccc', 'lineColor': '#666666', 'secondaryColor': '#f8f9fa', 'tertiaryColor': '#ffffff', 'background': '#ffffff', 'mainBkg': '#ffffff', 'secondBkg': '#f8f9fa'}}}%%
 ---
 title: Portfolio Component Architecture
 ---
