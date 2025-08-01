@@ -11,6 +11,10 @@ const words = [
 
 const navLinks = [
   {
+    name: "Education",
+    link: "#education",
+  },
+  {
     name: "Leetcode Stats",
     link: "#leetcode-counter",
   },
@@ -234,6 +238,41 @@ const expLogos = [
   },
 ];
 
+const educationCards = [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    institution: "National Institute of Technology, Warangal",
+    duration: "2022 – 2025",
+    grade: "CGPA: 7.93/10",
+    review:
+      "Specialized in Software Engineering, Data Structures, Database Management, and Web Technologies. Completed advanced coursework in system design and software development methodologies.",
+    achievements: [
+      "Graduated with distinction in Software Engineering",
+      "Led multiple project teams in final year",
+      "Completed thesis on Full-Stack Web Development",
+      "Active participant in coding competitions and hackathons",
+    ],
+    logoPath: "/images/edu1.png", // You can replace with actual university logo
+    imgPath: "", // Using existing image, you can replace with education-specific image
+  },
+  {
+    degree: "Bachelor of Computer Applications (BCA)",
+    institution: "College of Commerce, Arts and Science, Patna",
+    duration: "2017 – 2020",
+    grade: "Percentage: 70%",
+    review:
+      "Foundation in Computer Science principles, Programming Languages, Database Systems, and Software Development. Strong focus on practical application of theoretical concepts.",
+    achievements: [
+      "Completed multiple software development projects",
+      "Participated in university coding events",
+      "Developed strong foundation in programming languages",
+      "Maintained consistent academic performance",
+    ],
+    logoPath: "/images/edu2.png", // You can replace with actual university logo
+    imgPath: "", // Using existing image, you can replace with education-specific image
+  },
+];
+
 const socialImgs = [
   {
     name: "insta",
@@ -261,6 +300,7 @@ export {
   leetcodeCounterItems,
   expCards,
   expLogos,
+  educationCards,
   socialImgs,
   techStackIcons,
   techStackImgs,

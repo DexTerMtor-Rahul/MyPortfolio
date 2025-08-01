@@ -9,12 +9,14 @@ import ExperienceSection from "./sections/ExperienceSection.jsx";
 import TechStack from "./sections/TechStack.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
+import Education from "./sections/Education.jsx";
 
 const App = () => {
   return (
     <>
       <NavBar />
       <Hero />
+      <Education />
       <LeetCodeSection username={config.leetcodeUsername} />
       {/* <AppShowcase />
       <LogoSection /> */}
