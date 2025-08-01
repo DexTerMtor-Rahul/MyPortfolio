@@ -495,11 +495,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Rahul Raj** - _MCA Graduate & Software Developer_
 
-- 🌐 **Portfolio**: [https://your-portfolio-url.vercel.app](https://your-portfolio-url.vercel.app)
 - 💼 **GitHub**: [@DexTerMtor-Rahul](https://github.com/DexTerMtor-Rahul)
 - 🔗 **LinkedIn**: [dextermtor-rahulraj](https://linkedin.com/in/dextermtor-rahulraj)
 - 💻 **LeetCode**: [DexTerMtor](https://leetcode.com/DexTerMtor)
-- 📧 **Email**: [rahul.contact@email.com](mailto:rahul.contact@email.com)
 
 ### 📊 Portfolio Stats
 
