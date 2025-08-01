@@ -2,7 +2,7 @@
 
 > A modern, interactive portfolio showcasing my journey as an MCA Graduate & Software Developer
 
-![Portfolio Preview](./public/images/readme.png)
+![Portfolio Preview](./public/images/Cover.png)
 
 ## 🌟 Overview
 
@@ -271,9 +271,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to the open-source community for amazing libraries
 - Inspiration from modern portfolio designs
 - 3D models and assets from various creators
-
----
-
-⭐ **Star this repository if you found it helpful!**
-
-![Footer](./public/images/readme-bottom.png)
