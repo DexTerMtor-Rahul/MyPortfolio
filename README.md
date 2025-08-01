@@ -129,88 +129,59 @@ classDiagram
         +ContactExperience
         +Computer
     }
-    class LeetCodeAPI {
-        <<external>>
-        +fetchUserStats()
-        +getUserProfile()
-    }
-    class EmailJS {
-        <<external>>
-        +sendForm()
-        +init()
-    }
-
-    %% Apply Styling to Classes
-    App:::mainComponent
-    Config:::configClass
-    Hero:::sectionClass
-    Education:::sectionClass
-    LeetCodeSection:::sectionClass
-    ExperienceSection:::sectionClass
-    FeatureCards:::sectionClass
-    TechStack:::sectionClass
-    Contact:::sectionClass
-    HeroExperience:::experienceClass
-    LeetCodeAPI:::apiClass
-    EmailJS:::apiClass
+    class LeetCodeAPI
+    class EmailJS
 
     %% Relations
-    App --> Config : uses
-    App --> NavBar : renders
-    App --> Hero : renders
-    App --> Education : renders
-    App --> LeetCodeSection : renders
-    App --> ExperienceSection : renders
-    App --> FeatureCards : renders
-    App --> TechStack : renders
-    App --> Contact : renders
-    App --> Footer : renders
+    App --> Config
+    App --> NavBar
+    App --> Hero
+    App --> Education
+    App --> LeetCodeSection
+    App --> ExperienceSection
+    App --> FeatureCards
+    App --> TechStack
+    App --> Contact
+    App --> Footer
 
-    Hero --> ParallaxBackground : contains
-    Hero --> HeroExperience : contains
-    Hero --> Button : contains
+    Hero --> ParallaxBackground
+    Hero --> HeroExperience
+    Hero --> Button
 
-    HeroExperience --> Astronaut : renders
-    HeroExperience --> HeroLights : contains
-    HeroExperience --> Room : renders
-    HeroExperience --> OrbitControls : uses
-    HeroExperience --> Canvas : wraps
+    HeroExperience --> Astronaut
+    HeroExperience --> HeroLights
+    HeroExperience --> Room
+    HeroExperience --> OrbitControls
+    HeroExperience --> Canvas
 
-    Education --> TitleHeader : uses
-    Education --> GlowCard : renders
-    Education --> GSAP : animates
+    Education --> TitleHeader
+    Education --> GlowCard
+    Education --> GSAP
 
-    LeetCodeSection --> TitleHeader : uses
-    LeetCodeSection --> LeetCodeAPI : fetches
-    LeetCodeSection --> CounterAnimation : uses
-    LeetCodeSection --> CountUp : renders
+    LeetCodeSection --> TitleHeader
+    LeetCodeSection --> LeetCodeAPI
+    LeetCodeSection --> CounterAnimation
+    LeetCodeSection --> CountUp
 
-    ExperienceSection --> TitleHeader : uses
-    ExperienceSection --> GlowCard : renders
-    ExperienceSection --> GSAP : animates
+    ExperienceSection --> TitleHeader
+    ExperienceSection --> GlowCard
+    ExperienceSection --> GSAP
 
-    FeatureCards --> TitleHeader : uses
-    FeatureCards --> AbilityCards : renders
+    FeatureCards --> TitleHeader
+    FeatureCards --> AbilityCards
 
-    TechStack --> TitleHeader : uses
-    TechStack --> TechIcon : renders
-    TechStack --> TechGrid : contains
-    TechStack --> GSAP : animates
+    TechStack --> TitleHeader
+    TechStack --> TechIcon
+    TechStack --> TechGrid
+    TechStack --> GSAP
 
-    Contact --> TitleHeader : uses
-    Contact --> ContactForm : contains
-    Contact --> ContactExperience : renders
-    Contact --> Computer : displays
+    Contact --> TitleHeader
+    Contact --> ContactForm
+    Contact --> ContactExperience
+    Contact --> Computer
 
-    LeetCodeSection --> LeetCodeAPI : integrates
-    Contact --> EmailJS : integrates
-
-    %% Color Definitions
-    classDef mainComponent fill:#667eea,stroke:#764ba2,stroke-width:3px,color:#fff
-    classDef configClass fill:#f093fb,stroke:#f5576c,stroke-width:2px,color:#fff
-    classDef sectionClass fill:#4facfe,stroke:#00f2fe,stroke-width:2px,color:#fff
-    classDef experienceClass fill:#43e97b,stroke:#38f9d7,stroke-width:2px,color:#333
-    classDef apiClass fill:#fa709a,stroke:#fee140,stroke-width:2px,color:#fff
+    LeetCodeSection --> LeetCodeAPI
+    ContactForm --> EmailJS
 ```
 
 This architecture demonstrates the modular design of the portfolio, with clear separation of concerns and efficient data flow between components.
