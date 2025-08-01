@@ -101,7 +101,7 @@ const LeetCodeSection = ({ username }) => {
     <div
       id="leetcode-counter"
       ref={counterRef}
-      className="padding-x-lg xl:mt-0 mt-20"
+      className="md:mt-40 mt-20 section-padding xl:px-0"
     >
       <TitleHeader title="LeetCode Statistics" sub={"💻 My LeetCode Journey"} />
 
