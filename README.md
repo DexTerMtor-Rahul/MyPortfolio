@@ -1,4 +1,4 @@
-# 🚀 Portfolio - Rahul Raj
+#🚀 Portfolio-Rahul
 
 > A modern, interactive portfolio showcasing my journey as an MCA Graduate & Software Developer
 
@@ -10,9 +10,224 @@
 
 > Experience the full interactive portfolio with 3D animations, smooth transitions, and responsive design across all devices.
 
-## �🌟 Overview
+# 🌟 Overview
 
 Welcome to my personal portfolio website! This project represents my skills, experience, and passion for creating innovative digital solutions. Built with cutting-edge technologies, it features smooth animations, 3D interactions, and a responsive design that works seamlessly across all devices.
+
+## 🔄 Application Flow
+
+The following sequence diagram illustrates how the portfolio loads and renders each section:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant App as App.jsx
+    participant Config as constants/index.js
+    participant Hero as Hero.jsx
+    participant Education as Education.jsx
+    participant LeetCode as LeetCodeSection.jsx
+    participant Experience as ExperienceSection.jsx
+    participant Features as FeatureCards.jsx
+    participant TechStack as TechStack.jsx
+    participant Contact as Contact.jsx
+    participant Footer
+    participant LeetCodeAPI as LeetCode API
+    participant EmailJS as EmailJS
+    participant Styled as index.css/Tailwind
+
+    User->>App: Load App
+    App->>Config: Load Configuration/Constants
+    App->>Hero: Render & Animate Hero
+    Hero->>Styled: Load styles/assets
+    App->>Education: Render Education Timeline
+    Education->>Config: Load education data
+    App->>LeetCode: Render Coding Stats
+    LeetCode->>LeetCodeAPI: Fetch user stats
+    App->>Experience: Render Experience Timeline
+    Experience->>Config: Load experience data
+    App->>Features: Render Feature Cards
+    Features->>Config: Load abilities data
+    App->>TechStack: Render Skills Grid
+    TechStack->>Config: Load tech stack data
+    App->>Contact: Render Contact Form & 3D Model
+    Contact->>EmailJS: Send message (on submit)
+    App->>Footer: Render Footer
+```
+
+This flow shows how data flows from configuration through each section, with external API calls for dynamic content like LeetCode statistics and contact form functionality.
+
+## 🏗️ Architecture Overview
+
+The following UML class diagram shows the component structure and relationships within the portfolio:
+
+```mermaid
+---
+title: Portfolio Component Architecture
+---
+classDiagram
+    class App {
+        +NavBar
+        +Hero
+        +Education
+        +LeetCodeSection
+        +ExperienceSection
+        +FeatureCards
+        +TechStack
+        +Contact
+        +Footer
+        +Config
+    }
+    class Config {
+        +PersonalInfo
+        +NavLinks
+        +EducationCards
+        +ExpCards
+        +TechStackData
+        +LeetCodeItems
+    }
+    class Hero {
+        +ParallaxBackground
+        +HeroExperience
+        +Button
+    }
+    class HeroExperience {
+        +Astronaut
+        +HeroLights
+        +Room
+        +OrbitControls
+        +Canvas
+    }
+    class Education {
+        +TitleHeader
+        +GlowCard
+        +GSAP
+    }
+    class LeetCodeSection {
+        +TitleHeader
+        +LeetCodeAPI
+        +CounterAnimation
+        +CountUp
+    }
+    class ExperienceSection {
+        +TitleHeader
+        +GlowCard
+        +GSAP
+    }
+    class FeatureCards {
+        +TitleHeader
+        +AbilityCards
+    }
+    class TechStack {
+        +TitleHeader
+        +TechIcon
+        +TechGrid
+        +GSAP
+    }
+    class Contact {
+        +TitleHeader
+        +ContactForm
+        +ContactExperience
+        +Computer
+    }
+    class LeetCodeAPI {
+        <<external>>
+        +fetchUserStats()
+        +getUserProfile()
+    }
+    class EmailJS {
+        <<external>>
+        +sendForm()
+        +init()
+    }
+
+    %% Styling Classes
+    class App
+    :::mainComponent
+    class Config
+    :::configClass
+    class Hero
+    :::sectionClass
+    class Education
+    :::sectionClass
+    class LeetCodeSection
+    :::sectionClass
+    class ExperienceSection
+    :::sectionClass
+    class FeatureCards
+    :::sectionClass
+    class TechStack
+    :::sectionClass
+    class Contact
+    :::sectionClass
+    class HeroExperience
+    :::experienceClass
+    class LeetCodeAPI
+    :::apiClass
+    class EmailJS
+    :::apiClass
+
+    %% Relations
+    App --> Config : uses
+    App --> NavBar : renders
+    App --> Hero : renders
+    App --> Education : renders
+    App --> LeetCodeSection : renders
+    App --> ExperienceSection : renders
+    App --> FeatureCards : renders
+    App --> TechStack : renders
+    App --> Contact : renders
+    App --> Footer : renders
+
+    Hero --> ParallaxBackground : contains
+    Hero --> HeroExperience : contains
+    Hero --> Button : contains
+
+    HeroExperience --> Astronaut : renders
+    HeroExperience --> HeroLights : contains
+    HeroExperience --> Room : renders
+    HeroExperience --> OrbitControls : uses
+    HeroExperience --> Canvas : wraps
+
+    Education --> TitleHeader : uses
+    Education --> GlowCard : renders
+    Education --> GSAP : animates
+
+    LeetCodeSection --> TitleHeader : uses
+    LeetCodeSection --> LeetCodeAPI : fetches
+    LeetCodeSection --> CounterAnimation : uses
+    LeetCodeSection --> CountUp : renders
+
+    ExperienceSection --> TitleHeader : uses
+    ExperienceSection --> GlowCard : renders
+    ExperienceSection --> GSAP : animates
+
+    FeatureCards --> TitleHeader : uses
+    FeatureCards --> AbilityCards : renders
+
+    TechStack --> TitleHeader : uses
+    TechStack --> TechIcon : renders
+    TechStack --> TechGrid : contains
+    TechStack --> GSAP : animates
+
+    Contact --> TitleHeader : uses
+    Contact --> ContactForm : contains
+    Contact --> ContactExperience : renders
+    Contact --> Computer : displays
+
+    LeetCodeSection --> LeetCodeAPI : integrates
+    Contact --> EmailJS : integrates
+
+    %% Color Definitions
+    classDef mainComponent fill:#667eea,stroke:#764ba2,stroke-width:3px,color:#fff
+    classDef configClass fill:#f093fb,stroke:#f5576c,stroke-width:2px,color:#fff
+    classDef sectionClass fill:#4facfe,stroke:#00f2fe,stroke-width:2px,color:#fff
+    classDef experienceClass fill:#43e97b,stroke:#38f9d7,stroke-width:2px,color:#333
+    classDef apiClass fill:#fa709a,stroke:#fee140,stroke-width:2px,color:#fff
+```
+
+This architecture demonstrates the modular design of the portfolio, with clear separation of concerns and efficient data flow between components.
+
+---
 
 ## ✨ Features
 
