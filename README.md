@@ -140,31 +140,19 @@ classDiagram
         +init()
     }
 
-    %% Styling Classes
-    class App
-    :::mainComponent
-    class Config
-    :::configClass
-    class Hero
-    :::sectionClass
-    class Education
-    :::sectionClass
-    class LeetCodeSection
-    :::sectionClass
-    class ExperienceSection
-    :::sectionClass
-    class FeatureCards
-    :::sectionClass
-    class TechStack
-    :::sectionClass
-    class Contact
-    :::sectionClass
-    class HeroExperience
-    :::experienceClass
-    class LeetCodeAPI
-    :::apiClass
-    class EmailJS
-    :::apiClass
+    %% Apply Styling to Classes
+    App:::mainComponent
+    Config:::configClass
+    Hero:::sectionClass
+    Education:::sectionClass
+    LeetCodeSection:::sectionClass
+    ExperienceSection:::sectionClass
+    FeatureCards:::sectionClass
+    TechStack:::sectionClass
+    Contact:::sectionClass
+    HeroExperience:::experienceClass
+    LeetCodeAPI:::apiClass
+    EmailJS:::apiClass
 
     %% Relations
     App --> Config : uses
