@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { leetcodeCounterItems } from "../constants";
-import { fetchLeetCodeStats } from "../services/leetcodeApi";
+// import { fetchLeetCodeStats } from "../services/leetcodeApi";
+import { fetchLeetCodeUserProfile } from "../services/leetcodeApi";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -20,11 +21,38 @@ const LeetCodeSection = ({ username }) => {
       try {
         setLoading(true);
         setError(null);
-        const stats = await fetchLeetCodeStats(username);
-        setLeetcodeStats(stats);
+
+        // Use new GraphQL API
+        const user = await fetchLeetCodeUserProfile(username);
+
+        if (!user) throw new Error("No user data returned from GraphQL API");
+
+        const arr = user?.submitStatsGlobal?.acSubmissionNum || [];
+        const getCount = (key) => {
+          const row = arr.find((r) => r.difficulty?.toLowerCase() === key);
+          return row?.count ?? 0;
+        };
+
+        const mapped = {
+          username: user.username || username,
+          totalSolved: getCount("all"),
+          easySolved: getCount("easy"),
+          mediumSolved: getCount("medium"),
+          hardSolved: getCount("hard"),
+        };
+
+        setLeetcodeStats(mapped);
       } catch (err) {
         setError(err.message);
-        console.error("Failed to fetch LeetCode stats:", err);
+        console.error("Failed to fetch LeetCode stats (GraphQL):", err);
+        // Optional: fallback to legacy REST if desired
+        // try {
+        //   const legacy = await fetchLeetCodeStats(username);
+        //   setLeetcodeStats(legacy);
+        //   setError(null);
+        // } catch (e2) {
+        //   console.error("Fallback also failed:", e2);
+        // }
       } finally {
         setLoading(false);
       }
@@ -101,7 +129,7 @@ const LeetCodeSection = ({ username }) => {
     <div
       id="leetcode-counter"
       ref={counterRef}
-      className="md:mt-40 mt-20 section-padding xl:px-0"
+      className="md:mt-40 mt-20 section-padding xl:px-0 px-4"
     >
       <TitleHeader title="LeetCode Statistics" sub={"💻 My LeetCode Journey"} />
 
@@ -120,9 +148,8 @@ const LeetCodeSection = ({ username }) => {
       )}
 
       {leetcodeStats && (
-        <div className="mx-auto grid-4-cols mt-5">
+        <div className="mx-auto grid-4-cols mt-5 px-4">
           {leetcodeCounterItems.map((item, index) => {
-            const value = leetcodeStats[item.key] || 0;
             return (
               <div
                 key={index}

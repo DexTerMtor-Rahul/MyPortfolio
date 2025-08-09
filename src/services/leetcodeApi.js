@@ -29,3 +29,63 @@ export const fetchLeetCodeStats = async (username) => {
     };
   }
 };
+
+// --- New: GraphQL user profile via LeetCode official endpoint (proxied) ---
+const GQL_ENDPOINT = import.meta.env?.DEV ? "/api/leetcode" : "/api/leetcode";
+
+export const getUserProfileQuery = `
+  query getUserProfile($username: String!) { 
+    matchedUser(username: $username) { 
+      username 
+      githubUrl 
+      twitterUrl 
+      linkedinUrl 
+      profile { 
+        ranking 
+        reputation 
+        reputationDiff 
+        solutionCount 
+        solutionCountDiff 
+        postViewCount 
+        postViewCountDiff 
+      } 
+      submitStatsGlobal { 
+        acSubmissionNum { 
+          difficulty 
+          count 
+          submissions 
+        } 
+      } 
+    } 
+  }
+`;
+
+export async function fetchLeetCodeUserProfile(username) {
+  try {
+    const res = await fetch(GQL_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        query: getUserProfileQuery,
+        variables: { username },
+      }),
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`LeetCode GraphQL error ${res.status}: ${text}`);
+    }
+
+    const data = await res.json();
+    if (data.errors) {
+      throw new Error(data.errors.map((e) => e.message).join("; "));
+    }
+
+    return data.data?.matchedUser;
+  } catch (err) {
+    console.error("Error fetching LeetCode profile:", err);
+    return null;
+  }
+}
